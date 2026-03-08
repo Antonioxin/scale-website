@@ -1,0 +1,100 @@
+{
+  "HomePage": {
+    "title": "Welcome",
+    "description": "This is placeholder content for the English home page."
+  },
+  "HomeHero": {
+    "title": "Professional Electronic Weighing Solutions Provider",
+    "subtitle": "From industrial weighing to precision measurement, we deliver reliable, accurate equipment and one-stop service to customers worldwide—helping businesses improve efficiency and quality.",
+    "viewProducts": "View Products",
+    "contactUs": "Contact Us"
+  },
+  "HomeProducts": {
+    "sectionTitle": "Product Series",
+    "industrial": {
+      "name": "Industrial Scales",
+      "description": "For production lines, warehousing, and logistics weighing"
+    },
+    "commercial": {
+      "name": "Commercial Scales",
+      "description": "Retail, supermarket, and market weighing solutions"
+    },
+    "precision": {
+      "name": "Precision Balances",
+      "description": "High-accuracy weighing for labs and quality control"
+    },
+    "custom": {
+      "name": "Custom Solutions",
+      "description": "Tailored design and integration for your needs"
+    }
+  },
+  "HomeStats": {
+    "years": "20+",
+    "yearsLabel": "Years Experience",
+    "countries": "50+",
+    "countriesLabel": "Export Countries",
+    "customers": "100,000+",
+    "customersLabel": "Customers Served",
+    "models": "500+",
+    "modelsLabel": "Product Models"
+  },
+  "HomeClients": {
+    "sectionTitle": "Our Clients"
+  },
+  "HomeNews": {
+    "sectionTitle": "News",
+    "viewAll": "View All",
+    "news1": {
+      "date": "Jan 15, 2024",
+      "title": "ScaleTech at 2024 International Industrial Expo",
+      "excerpt": "Showcasing smart weighing systems and IoT solutions, attracting numerous industry partners."
+    },
+    "news2": {
+      "date": "Feb 20, 2024",
+      "title": "New Precision Balance Certified by National Metrology",
+      "excerpt": "Leading the industry in accuracy, stability, and smart features."
+    },
+    "news3": {
+      "date": "Mar 5, 2024",
+      "title": "Strategic Partnership with European Logistics Leader",
+      "excerpt": "Providing integrated weighing and sorting equipment for their global network."
+    }
+  },
+  "HomeCta": {
+    "title": "Need a professional weighing solution?",
+    "button": "Contact Sales Team"
+  },
+  "Common": {
+    "switchToEn": "English",
+    "switchToZh": "中文"
+  },
+  "Nav": {
+    "logo": "ScaleTech",
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "news": "News",
+    "contact": "Contact",
+    "getQuote": "Get Quote",
+    "language": "Language"
+  },
+  "ProductsPage": { "title": "Products" },
+  "AboutPage": { "title": "About Us" },
+  "NewsPage": { "title": "News" },
+  "ContactPage": { "title": "Contact" },
+  "Footer": {
+    "companyIntro": "We focus on industrial manufacturing and smart solutions, delivering reliable products and professional services.",
+    "products": "Products",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "home": "Home",
+    "about": "About Us",
+    "news": "News",
+    "contactUs": "Contact Us",
+    "address": "Address",
+    "addressValue": "China · Some Industrial Park",
+    "phone": "Phone",
+    "email": "Email",
+    "copyright": "© {year} ScaleTech. All rights reserved."
+  }
+}

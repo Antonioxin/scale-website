@@ -1,0 +1,100 @@
+{
+  "HomePage": {
+    "title": "欢迎",
+    "description": "这是中文首页的占位内容。"
+  },
+  "HomeHero": {
+    "title": "专业电子衡器解决方案供应商",
+    "subtitle": "从工业称重到精密测量，我们为全球客户提供可靠、精准的称重设备与一站式服务，助力企业提升效率与品质。",
+    "viewProducts": "查看产品",
+    "contactUs": "联系我们"
+  },
+  "HomeProducts": {
+    "sectionTitle": "产品系列",
+    "industrial": {
+      "name": "工业秤",
+      "description": "适用于生产线、仓储、物流等重载称重场景"
+    },
+    "commercial": {
+      "name": "商用秤",
+      "description": "零售、超市、农贸市场的称重与计价解决方案"
+    },
+    "precision": {
+      "name": "精密天平",
+      "description": "实验室与质检领域的高精度称重设备"
+    },
+    "custom": {
+      "name": "定制方案",
+      "description": "根据您的场景需求提供专属设计与集成服务"
+    }
+  },
+  "HomeStats": {
+    "years": "20+",
+    "yearsLabel": "年行业经验",
+    "countries": "50+",
+    "countriesLabel": "出口国家",
+    "customers": "100,000+",
+    "customersLabel": "服务客户",
+    "models": "500+",
+    "modelsLabel": "产品型号"
+  },
+  "HomeClients": {
+    "sectionTitle": "合作客户"
+  },
+  "HomeNews": {
+    "sectionTitle": "新闻动态",
+    "viewAll": "查看全部",
+    "news1": {
+      "date": "2024-01-15",
+      "title": "ScaleTech 亮相 2024 国际工业博览会",
+      "excerpt": "展示最新智能称重系统与物联网解决方案，吸引众多行业客户洽谈合作。"
+    },
+    "news2": {
+      "date": "2024-02-20",
+      "title": "新一代精密天平通过国家计量认证",
+      "excerpt": "产品在精度、稳定性与智能化方面达到行业领先水平。"
+    },
+    "news3": {
+      "date": "2024-03-05",
+      "title": "与欧洲知名物流企业达成战略合作",
+      "excerpt": "为其全球仓储网络提供称重与分拣一体化设备。"
+    }
+  },
+  "HomeCta": {
+    "title": "需要专业的电子衡器方案？",
+    "button": "联系销售团队"
+  },
+  "Common": {
+    "switchToEn": "English",
+    "switchToZh": "中文"
+  },
+  "Nav": {
+    "logo": "ScaleTech",
+    "home": "首页",
+    "products": "产品中心",
+    "about": "关于我们",
+    "news": "新闻动态",
+    "contact": "联系我们",
+    "getQuote": "获取报价",
+    "language": "语言"
+  },
+  "ProductsPage": { "title": "产品中心" },
+  "AboutPage": { "title": "关于我们" },
+  "NewsPage": { "title": "新闻动态" },
+  "ContactPage": { "title": "联系我们" },
+  "Footer": {
+    "companyIntro": "专注于工业制造与智能解决方案，为客户提供可靠的产品与专业服务。",
+    "products": "产品中心",
+    "quickLinks": "快速链接",
+    "contact": "联系方式",
+    "home": "首页",
+    "about": "关于我们",
+    "news": "新闻动态",
+    "contactUs": "联系我们",
+    "address": "地址",
+    "addressValue": "中国 · 某某工业园",
+    "phone": "电话",
+    "email": "邮箱",
+    "copyright": "© {year} ScaleTech. 保留所有权利。"
+  }
+}
