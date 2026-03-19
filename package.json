@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed:sanity": "node --env-file=.env.local scripts/seed-sanity.mjs"
   },
   "dependencies": {
+    "@portabletext/react": "^6.0.3",
+    "@sanity/image-url": "^2.0.3",
     "next": "14.2.18",
     "next-intl": "^3.25.0",
+    "next-sanity": "^8.5.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sanity": "^3.52.4"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",

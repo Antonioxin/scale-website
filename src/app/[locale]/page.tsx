@@ -17,10 +17,10 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <HeroSection />
-      <ProductCategoriesSection />
+      <ProductCategoriesSection locale={locale} />
       <StatsSection />
       <ClientsSection />
-      <NewsSection />
+      <NewsSection locale={locale} />
       <CtaSection />
     </>
   );
