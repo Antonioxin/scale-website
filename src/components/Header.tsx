@@ -8,6 +8,7 @@ import { useLocale } from "next-intl";
 const navItems = [
   { href: "/", key: "home" },
   { href: "/products", key: "products" },
+  { href: "/downloads", key: "downloads" },
   { href: "/about", key: "about" },
   { href: "/news", key: "news" },
   { href: "/contact", key: "contact" },

@@ -35,6 +35,24 @@ const CAT_IDS = {
   custom: "productCategory-custom",
 };
 
+const COMPANY_INFO_ID = "companyInfo";
+
+function makeSvgPlaceholder(title, subtitle, bg = "#0f172a") {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="${bg}"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <rect x="80" y="80" width="1040" height="740" rx="24" fill="none" stroke="#7dd3fc" stroke-width="4"/>
+  <text x="600" y="410" text-anchor="middle" font-size="64" font-family="Arial, sans-serif" fill="#e2e8f0">${title}</text>
+  <text x="600" y="500" text-anchor="middle" font-size="36" font-family="Arial, sans-serif" fill="#cbd5e1">${subtitle}</text>
+</svg>`;
+}
+
 async function seed() {
   console.log("Seeding product categories...");
   await Promise.all([
@@ -140,6 +158,110 @@ async function seed() {
       body_en: [{ _type: "block", _key: "b1", style: "normal", children: [{ _type: "span", _key: "s1", text: post.excerpt_en }] }],
     });
   }
+
+  console.log("Seeding company info...");
+  const certSvgs = [
+    makeSvgPlaceholder("ISO 9001", "Quality Management", "#0b3b66"),
+    makeSvgPlaceholder("CE", "EU Compliance", "#1e3a8a"),
+    makeSvgPlaceholder("RoHS", "Environmental Standard", "#14532d"),
+    makeSvgPlaceholder("Calibration", "Metrology Certificate", "#4a044e"),
+  ];
+
+  const certAssets = [];
+  for (let i = 0; i < certSvgs.length; i += 1) {
+    const uploaded = await client.assets.upload(
+      "image",
+      Buffer.from(certSvgs[i], "utf-8"),
+      {
+        filename: `cert-placeholder-${i + 1}.svg`,
+        contentType: "image/svg+xml",
+      }
+    );
+    certAssets.push(uploaded);
+  }
+
+  await client.createOrReplace({
+    _id: COMPANY_INFO_ID,
+    _type: "companyInfo",
+    about_zh: [
+      {
+        _type: "block",
+        _key: "about-zh-1",
+        style: "normal",
+        children: [
+          {
+            _type: "span",
+            _key: "about-zh-1-span",
+            text: "ScaleTech 专注电子衡器研发与制造二十余年，业务覆盖工业称重、商用计价、精密实验室称量及自动化定制集成。我们坚持以稳定可靠的硬件设计、严谨的软件算法和完善的全球服务体系，为客户提供可持续的称重解决方案。",
+          },
+        ],
+      },
+    ],
+    about_en: [
+      {
+        _type: "block",
+        _key: "about-en-1",
+        style: "normal",
+        children: [
+          {
+            _type: "span",
+            _key: "about-en-1-span",
+            text: "ScaleTech has specialized in electronic weighing R&D and manufacturing for over 20 years, covering industrial weighing, commercial pricing, precision laboratory balancing, and custom automation integration. We deliver sustainable weighing solutions through reliable hardware, robust software algorithms, and global service support.",
+          },
+        ],
+      },
+    ],
+    milestones: [
+      {
+        _key: "ms-2010",
+        year: "2010",
+        title_zh: "公司成立",
+        title_en: "Company Founded",
+        description_zh: "ScaleTech 在深圳成立，专注工业称重产品研发。",
+        description_en: "ScaleTech was founded in Shenzhen, focusing on industrial weighing products.",
+      },
+      {
+        _key: "ms-2013",
+        year: "2013",
+        title_zh: "推出第一代智能工业秤",
+        title_en: "First Smart Industrial Scale Launched",
+        description_zh: "完成首代联网工业秤量产，并进入物流行业头部客户。",
+        description_en: "Mass-produced the first connected industrial scale and entered top-tier logistics accounts.",
+      },
+      {
+        _key: "ms-2017",
+        year: "2017",
+        title_zh: "海外市场拓展",
+        title_en: "Global Expansion",
+        description_zh: "产品出口覆盖 30+ 国家，建立欧洲与东南亚服务网络。",
+        description_en: "Expanded exports to 30+ countries and established service networks in Europe and Southeast Asia.",
+      },
+      {
+        _key: "ms-2021",
+        year: "2021",
+        title_zh: "实验室精密产品线升级",
+        title_en: "Precision Lab Product Upgrade",
+        description_zh: "发布新一代精密天平，满足药企与科研机构高标准要求。",
+        description_en: "Released next-gen precision balances for pharmaceutical and research institutions.",
+      },
+      {
+        _key: "ms-2024",
+        year: "2024",
+        title_zh: "智能工厂二期投产",
+        title_en: "Smart Factory Phase II",
+        description_zh: "新增自动化装配与检测产线，整体交付效率提升 35%。",
+        description_en: "Launched new automated assembly and inspection lines, improving delivery efficiency by 35%.",
+      },
+    ],
+    certifications: certAssets.map((asset, idx) => ({
+      _key: `cert-${idx + 1}`,
+      _type: "image",
+      asset: {
+        _type: "reference",
+        _ref: asset._id,
+      },
+    })),
+  });
 
   console.log("Seed completed.");
 }

@@ -65,6 +65,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/downloads"
+                  className="text-sm transition hover:text-sky-400"
+                >
+                  {t("downloads")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/news"
                   className="text-sm transition hover:text-sky-400"
                 >

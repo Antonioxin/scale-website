@@ -1,15 +1,14 @@
-import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { getPostsForList } from "sanity/lib/queries";
+import NewsClient from "./NewsClient";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function NewsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("NewsPage");
-  return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-slate-900">{t("title")}</h1>
-    </section>
-  );
+  await getTranslations("NewsPage");
+  const posts = await getPostsForList(100);
+  return <NewsClient locale={locale} posts={posts as any} />;
 }
